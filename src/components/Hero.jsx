@@ -4,7 +4,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white ">
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-10">
         
         {/* Left Content */}

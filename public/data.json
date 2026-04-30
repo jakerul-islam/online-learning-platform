@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp 2026",
+    "instructor": "Rahim Hassan",
+    "duration": "28 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Master HTML, CSS, JavaScript, React, Next.js, Node.js and MongoDB from scratch.",
+    "image": "https://i.ibb.co.com/ymyrw10S/image.png",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass with Figma",
+    "instructor": "Sadia Rahman",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Learn modern UI/UX design principles, Figma mastery, prototyping and design systems.",
+    "image": "https://i.ibb.co.com/4n9wjZ4v/image.png",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing & Social Media Mastery",
+    "instructor": "Tanvir Ahmed",
+    "duration": "15 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Facebook, Instagram, YouTube Ads, SEO, Content Marketing and Analytics.",
+    "image": "https://i.ibb.co.com/fd1hLhZN/image.png",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Advanced React & Next.js 15 Mastery",
+    "instructor": "Fahim Khan",
+    "duration": "22 hours",
+    "rating": 4.7,
+    "level": "Advanced",
+    "description": "Server Components, Server Actions, App Router, Authentication, and Performance Optimization.",
+    "image": "https://i.ibb.co.com/7tPSrBGM/image.png",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design with Canva & Photoshop",
+    "instructor": "Nadia Islam",
+    "duration": "12 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Create stunning social media posts, thumbnails, logos and branding materials.",
+    "image": "https://i.ibb.co.com/KjB48VzH/image.png",
+    "category": "Design"
+  },
+  {
+    "id": 6,
+    "title": "Python for Data Science & Machine Learning",
+    "instructor": "Dr. Imran Khan",
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Data Analysis, Visualization, Pandas, NumPy, Scikit-learn and real projects.",
+    "image": "https://i.ibb.co.com/ds7G2bL4/image.png",
+    "category": "Development"
+  },
+  {
+    "id": 7,
+    "title": "Freelancing & Personal Branding Masterclass",
+    "instructor": "Mehedi Hasan",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "How to start freelancing, build portfolio, pricing, client acquisition and Upwork success.",
+    "image": "https://i.ibb.co.com/NM1xBQz/image.png",
+    "category": "Business"
+  },
+  {
+    "id": 8,
+    "title": "Video Editing with Premiere Pro & After Effects",
+    "instructor": "Shakil Ahmed",
+    "duration": "16 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Professional video editing, motion graphics, color grading and YouTube content creation.",
+    "image": "https://i.ibb.co.com/G3sQ8rVZ/image.png",
+    "category": "Design"
+  }
+]

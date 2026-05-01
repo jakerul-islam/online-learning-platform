@@ -1,8 +1,14 @@
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
-const TrendingCourses = () => {
+const TrendingCourses =async () => {
+
+   const res = await fetch('https://online-learning-platform-self-nine.vercel.app/data.json');
+    const course = await res.json()
+
+    console.log(course, ' from trending page')
     
     return (
         <div>
@@ -36,7 +42,7 @@ const TrendingCourses = () => {
                        </div>
                
                        {/* Button */}
-                      <Button variant="outline" className={'w-full'}>View Details</Button>
+                       <Button variant="outline" className={'w-full'}>View Details</Button>
                      </div>
                </Card>
                <Card>
@@ -64,7 +70,7 @@ const TrendingCourses = () => {
                        </div>
                
                        {/* Button */}
-                      <Button variant="outline" className={'w-full'}>View Details</Button>
+                       <Button variant="outline" className={'w-full'}>View Details</Button>
                      </div>
                </Card>
                <Card>

@@ -2,13 +2,14 @@
 
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CourseCard = ({ course }) => {
-  const { title, instructor, rating, image } = course;
+  const { id,title, instructor, rating, image } = course;
 
   return (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 border">
       
       {/* Image */}
       <div className=" ">
@@ -39,11 +40,11 @@ const CourseCard = ({ course }) => {
 
         {/* Rating */}
         <div className="flex items-center gap-1 text-yellow-500 text-sm">
-          ⭐ 4.9
+          ⭐ {rating}
         </div>
 
         {/* Button */}
-       <Button variant="outline" className={'w-full'}>View Details</Button>
+       <Link href={`/all-courses/${id}`}><Button variant="outline" className={'w-full'}>View Details</Button></Link>
       </div>
     </div>
   );

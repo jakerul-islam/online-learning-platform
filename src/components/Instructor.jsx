@@ -4,8 +4,8 @@ import React from 'react';
 
 const Instructor = () => {
     return (
-        <div>
-            <h2 className='font-bold text-2xl'>Trending Courses</h2>
+        <div className='my-7'>
+            <h2 className='font-bold text-2xl'>Our Instructors</h2>
             
             
                         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
@@ -13,7 +13,7 @@ const Instructor = () => {
                            <Card>
             
                            <div>
-                             <Image src={"https://i.ibb.co.com/ds7G2bL4/image.png"}  width={300} height={300} alt=''
+                             <Image src={"https://i.ibb.co.com/BVFzcnKh/Generated-Image-September-12-2025-5-06-AM.png"}  width={300} height={300} alt=''
                              className="rounded-2xl w-full h-full object-cover p-2"
                             />
                            </div>
@@ -21,12 +21,12 @@ const Instructor = () => {
                                    
                                    {/* Title */}
                                    <h2 className="text-lg font-semibold line-clamp-2">
-                                    Python for Data Science & Machine Learning
+                                   Instructor: Forhad Hossain
                                    </h2>
                            
                                    {/* Instructor */}
                                    <p className="text-sm text-gray-500">
-                                     Instructor: Dr. Imran Khan
+                                      Python for Data Science & Machine Learning
                                    </p>
                            
                                    {/* Rating */}
@@ -39,7 +39,7 @@ const Instructor = () => {
                            <Card>
             
                            <div>
-                             <Image src={"https://i.ibb.co.com/NM1xBQz/image.png"}  width={300} height={300} alt=''
+                             <Image src={"https://i.ibb.co.com/NdmhnZ8h/image.png"}  width={300} height={300} alt=''
                              className="rounded-2xl w-full h-full object-cover p-2"
                             />
                            </div>
@@ -47,12 +47,12 @@ const Instructor = () => {
                                    
                                    {/* Title */}
                                    <h2 className="text-lg font-semibold line-clamp-2">
-                                    Freelancing & Personal Branding Masterclass
+                                    Instructor: Jakerul islam
                                    </h2>
                            
                                    {/* Instructor */}
                                    <p className="text-sm text-gray-500">
-                                     Instructor: Mehedi Hasan
+                                     Freelancing & Personal Branding Masterclass
                                    </p>
                            
                                    {/* Rating */}
@@ -65,7 +65,7 @@ const Instructor = () => {
                            <Card>
             
                            <div>
-                             <Image src={"https://i.ibb.co.com/G3sQ8rVZ/image.png"}  width={300} height={300} alt=''
+                             <Image src={"https://i.ibb.co.com/nq4cHvL1/image.png"}  width={300} height={300} alt=''
                              className="rounded-2xl w-full h-full object-cover p-2"
                             />
                            </div>
@@ -73,12 +73,12 @@ const Instructor = () => {
                                    
                                    {/* Title */}
                                    <h2 className="text-lg font-semibold line-clamp-2">
-                                   Video Editing with Premiere Pro & After Effects
+                                  Instructor:Jhankar Mahbub
                                    </h2>
                            
                                    {/* Instructor */}
                                    <p className="text-sm text-gray-500">
-                                     Instructor:Shakil Ahmed
+                                    Video Editing with Premiere Pro & After Effects  
                                    </p>
                            
                                   

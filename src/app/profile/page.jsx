@@ -35,7 +35,7 @@ console.log(user , 'from profile')
        
       </div>
 
-     <div>
+     <div className='text-center'>
         <h2 className='font-bold text-2xl'>{user?.name}</h2>
         <p className='text-gray-500 '>{user.email}</p>
      </div>

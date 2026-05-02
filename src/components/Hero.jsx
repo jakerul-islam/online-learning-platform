@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import 'animate.css';
 
 const Hero = () => {
   return (
@@ -28,11 +29,11 @@ const Hero = () => {
         {/* Buttons */}
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           
-          <button className="w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out hover:bg-gray-200 hover:scale-105 active:scale-95">
+          <button className="animate__backInLeft animate__animated w-full sm:w-auto bg-white text-black px-6 py-3 rounded-full font-medium transition duration-300 ease-in-out hover:bg-gray-200 hover:scale-105 active:scale-95">
             Explore Courses
           </button>
 
-          <button className="w-full sm:w-auto border  border-gray-500 text-white px-6 py-3 rounded-full transition duration-300 ease-in-out hover:bg-white hover:text-black hover:scale-105 active:scale-95">
+          <button className="animate__backInRight animate__animated w-full sm:w-auto border  border-gray-500 text-white px-6 py-3 rounded-full transition duration-300 ease-in-out hover:bg-white hover:text-black hover:scale-105 active:scale-95">
             Get Started
           </button>
 

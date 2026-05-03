@@ -33,7 +33,8 @@ const ProfilePage = async () => {
         <p className="text-gray-500 ">{user?.email}</p>
       </div>
 
-      <ProfileUpdate />
+      {/* <ProfileUpdate /> */}
+      <Link href={'/updateprofile'}><Button>Update Profile</Button></Link>
     </Card>
   );
 };

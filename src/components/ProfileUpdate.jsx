@@ -51,7 +51,7 @@ export function ProfileUpdate() {
               <Button slot="close" variant="secondary">
                 Cancel
               </Button>
-              <Button type="submit" slot="close">Save</Button>
+             
             </Modal.Footer>
                
                  

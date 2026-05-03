@@ -19,7 +19,7 @@ const UpdateProfilePage = () => {
         }
     return (
         <div className='mx-auto max-w-2xl space-y-4'>
-             <form onSubmit={onSubmit} className="flex flex-col gap-4 shadow-2xl p-6 space-y-4">
+             <form onSubmit={onSubmit} className="flex flex-col gap-6 shadow-2xl p-6 ">
                   <TextField className="w-full" name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
@@ -27,7 +27,7 @@ const UpdateProfilePage = () => {
                   <TextField className="w-full" name="image" type="text">
                     <Label>Image</Label>
                     <Input placeholder="Enter your image url" />
-                     <Button type="submit" slot="close">Save</Button>
+                     <Button  type="submit" slot="close">Save</Button>
                   </TextField>
             
                

@@ -13,8 +13,16 @@ import {
 import { authClient } from "@/lib/auth-client";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const SignInPage = () => {
+  const router = useRouter()
+ const searchParams = useSearchParams()
+  
+  
+  const callbackUrl = searchParams.get('callbackUrl') || '/'
+
+  console.log(callbackUrl ,'signin page')
   const onSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -24,10 +32,11 @@ const SignInPage = () => {
 
     const { data, error } = await authClient.signIn.email({
       ...userData,
-      callbackURL: "/",
+     
     });
     if (data) {
       toast.success("Sign In successfully🙂");
+      router.push(callbackUrl)
     } else {
       toast.error("signIn Error 😓" + error.message);
     }

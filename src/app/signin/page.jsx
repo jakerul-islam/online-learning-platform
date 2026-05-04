@@ -49,7 +49,7 @@ const SignInPage = () => {
   });
 };
   return (
-    <div>
+    <div className="flex justify-center items-center flex-col">
       <h2 className="font-bold text-2xl my-4">Login here</h2>
       <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
         <TextField

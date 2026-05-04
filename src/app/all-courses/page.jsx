@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const AllCoursesPage = () => {
     const [courses, setCourses] = useState([]);
     const [search, setSearch] = useState("");
-    const [query, setQuery] = useState(""); // button click এর জন্য
+    const [query, setQuery] = useState(""); 
 
     useEffect(() => {
         fetch('https://online-learning-platform-self-nine.vercel.app/data.json')
@@ -14,12 +14,12 @@ const AllCoursesPage = () => {
             .then(data => setCourses(data));
     }, []);
 
-    // button click হলে search apply হবে
+    
     const handleSearch = () => {
         setQuery(search);
     };
 
-    // filter using query (not search)
+
     const filteredCourses = courses.filter(course =>
         course.title.toLowerCase().includes(query.toLowerCase())
     );

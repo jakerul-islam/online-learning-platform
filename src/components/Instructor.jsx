@@ -96,33 +96,29 @@ const Instructor = () => {
               {/* Shimmer */}
               <div className="shimmer-layer pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full" />
 
-              {/* Top gradient banner */}
-              <div className={`h-24 w-full bg-gradient-to-r ${ins.color} relative`}>
-                <span className={`absolute top-3 right-3 text-xs font-semibold px-3 py-1 rounded-full ${ins.tagStyle}`}>
-                  {ins.tag}
-                </span>
-              </div>
-
-              {/* Avatar — overlaps banner */}
-              <div className="flex justify-center -mt-12 mb-3">
-                <div className="avatar-wrap ring-glow rounded-full border-4 border-white overflow-hidden w-24 h-24 shadow-md">
+              {/* Avatar — top center, no banner */}
+              <div className="flex justify-between items-start px-4 pt-5 mb-3">
+                <div className="avatar-wrap ring-glow rounded-full border-4 border-white overflow-hidden w-20 h-20 shadow-md">
                   <Image
                     src={ins.image}
-                    width={96}
-                    height={96}
+                    width={80}
+                    height={80}
                     alt={ins.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
+                <span className={`text-xs font-semibold px-3 py-1 rounded-full h-fit mt-1 ${ins.tagStyle}`}>
+                  {ins.tag}
+                </span>
               </div>
 
               {/* Info */}
-              <div className="px-5 pb-5 text-center space-y-1">
+              <div className="px-5 pb-5 space-y-1">
                 <h2 className="text-base font-bold text-gray-800">{ins.name}</h2>
                 <p className="text-xs text-gray-400 line-clamp-2">{ins.course}</p>
 
                 {/* Stats */}
-                <div className="flex justify-center gap-3 pt-2">
+                <div className="flex gap-3 pt-2">
                   <div className="stat-pill flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2">
                     <span className="text-sm font-bold text-gray-800">{ins.students}</span>
                     <span className="text-[10px] text-gray-400">Students</span>

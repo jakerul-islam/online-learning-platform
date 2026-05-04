@@ -1,160 +1,104 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
+
+const tips = [
+  {
+    title: "Active Recall",
+    tag: "Memory",
+    icon: "🧠",
+    desc: "Test yourself after learning instead of re-reading. This strengthens long-term memory.",
+    color: "from-purple-500 to-indigo-500",
+  },
+  {
+    title: "Pomodoro Technique",
+    tag: "Focus",
+    icon: "⏱️",
+    desc: "Work 25 mins, break 5 mins. Stay focused and avoid burnout.",
+    color: "from-green-400 to-emerald-500",
+  },
+  {
+    title: "Spaced Repetition",
+    tag: "Retention",
+    icon: "🗓️",
+    desc: "Review content over increasing intervals for better memory retention.",
+    color: "from-orange-400 to-red-400",
+  },
+  {
+    title: "Feynman Technique",
+    tag: "Understanding",
+    icon: "🚀",
+    desc: "Explain simply. If you can't, you don’t understand it yet.",
+    color: "from-pink-500 to-rose-500",
+  },
+  {
+    title: "Time Blocking",
+    tag: "Planning",
+    icon: "🎯",
+    desc: "Schedule study time like meetings to avoid distractions.",
+    color: "from-teal-400 to-cyan-500",
+  },
+  {
+    title: "Single Tasking",
+    tag: "Productivity",
+    icon: "🔕",
+    desc: "Focus on one task at a time for better results.",
+    color: "from-yellow-400 to-amber-500",
+  },
+];
 
 const LearningTipCard = () => {
   return (
-    <div className="my-7">
-        <h2 className="font-bold text-2xl my-5">Learning Tips </h2>
+    <section className="my-10">
+      <h2 className="font-bold text-2xl mb-6 text-center">
+        Learning Tips ✨
+      </h2>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {tips.map((tip, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.03 }}
+            className="relative group rounded-2xl p-[1px] bg-gradient-to-br from-gray-200/20 to-white/10"
+          >
+            {/* Gradient border glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 blur-xl transition duration-500 bg-gradient-to-br from-purple-500/30 to-blue-500/30" />
 
-        
+            {/* Card */}
+            <div className="relative bg-white/80 backdrop-blur-xl rounded-2xl p-6 flex flex-col gap-3 h-full">
+              
+              {/* Top */}
+              <div className="flex justify-between items-center">
+                <div className={`text-2xl bg-gradient-to-r ${tip.color} bg-clip-text text-transparent`}>
+                  {tip.icon}
+                </div>
+                <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600">
+                  {tip.tag}
+                </span>
+              </div>
 
-      {/* Card 1 - Active Recall */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center text-2xl">
-            🧠
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-100 text-purple-600">
-            Memory
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Study Technique
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          Active Recall
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          After each lesson, close your notes and write down everything you remember. Testing yourself strengthens memory far better than re-reading.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
+              {/* Title */}
+              <h3 className="text-lg font-bold text-gray-800">
+                {tip.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm text-gray-500">
+                {tip.desc}
+              </p>
+
+              {/* Hover line */}
+              <div className="mt-auto h-[2px] w-0 group-hover:w-full transition-all duration-500 bg-gradient-to-r from-purple-500 to-blue-500" />
+            </div>
+          </motion.div>
+        ))}
       </div>
-
-      {/* Card 2 - Pomodoro Technique */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-2xl">
-            ⏱️
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-green-100 text-green-600">
-            Focus
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Time Management
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          Pomodoro Technique
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Work in focused 25-minute blocks, then take a 5-minute break. After 4 pomodoros, take a longer 15–30 minute break to recharge.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
-      </div>
-
-      {/* Card 3 - Spaced Repetition */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-orange-100 flex items-center justify-center text-2xl">
-            🗓️
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-orange-100 text-orange-600">
-            Retention
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Study Technique
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          Spaced Repetition
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Review material at increasing intervals — 1 day, 3 days, 1 week, 2 weeks. This technique exploits how your brain consolidates memories.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
-      </div>
-
-      {/* Card 4 - The Feynman Technique */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-2xl">
-            🚀
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-pink-100 text-pink-600">
-            Understanding
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Study Technique
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          The Feynman Technique
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Explain a concept in simple terms as if teaching a child. When you get stuck, go back to the source. Simplicity reveals true understanding.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
-      </div>
-
-      {/* Card 5 - Time Blocking */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-teal-100 flex items-center justify-center text-2xl">
-            🎯
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-teal-100 text-teal-600">
-            Planning
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Time Management
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          Time Blocking
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Schedule specific learning blocks in your calendar and treat them like meetings. Assign tasks to time slots to remove decision fatigue.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
-      </div>
-
-      {/* Card 6 - Single-Tasking */}
-      <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-3">
-        <div className="flex items-start justify-between">
-          <div className="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center text-2xl">
-            🔕
-          </div>
-          <span className="text-xs font-semibold px-3 py-1 rounded-full bg-amber-100 text-amber-600">
-            Productivity
-          </span>
-        </div>
-        <p className="text-[11px] font-semibold tracking-widest text-gray-400 uppercase">
-          Focus
-        </p>
-        <h3 className="text-lg font-bold text-gray-800 leading-snug -mt-1">
-          Single-Tasking
-        </h3>
-        <p className="text-sm text-gray-500 leading-relaxed">
-          Close all unrelated tabs, silence notifications, and give 100% attention to one subject. Multitasking reduces output quality significantly.
-        </p>
-        <a href="#" className="text-sm font-semibold text-indigo-500 hover:text-indigo-700 transition-colors self-start">
-          Read more ↓
-        </a>
-      </div>
-
-    </div>
-    </div>
+    </section>
   );
 };
 
